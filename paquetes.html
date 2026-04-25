@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paquetes Turísticos – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<main id="app">
+  <section class="page active">
+    <div class="page-hero short">
+      <h1>Paquetes <em>Turísticos</em></h1>
+      <p>Diseñados para cada tipo de viajero: aventura, relax, cultura y gastronomía</p>
+    </div>
+
+    <div class="container">
+
+      <!-- Tabs de categorías -->
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('todos', this)">Todos</button>
+        <button class="tab" onclick="switchTab('todo-incluido', this)">Todo incluido</button>
+        <button class="tab" onclick="switchTab('finde', this)">Fines de semana</button>
+        <button class="tab" onclick="switchTab('luna-miel', this)">Luna de miel</button>
+        <button class="tab" onclick="switchTab('vacacional', this)">Temporada vacacional</button>
+      </div>
+
+      <!-- TODOS -->
+      <div id="todos" class="tab-content active">
+        <div class="routes-grid">
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)">
+              <span class="route-flag">🌴</span>
+            </div>
+            <div class="route-body">
+              <h3>Paquete San Andrés 4 noches</h3>
+              <p>Todo incluido • Vuelo + Hotel + Excursiones en el mar de siete colores.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 4 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $1.850.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#c8860a)">
+              <span class="route-flag">💑</span>
+            </div>
+            <div class="route-body">
+              <h3>Cartagena Luna de Miel</h3>
+              <p>Hotel boutique + Cena romántica + Paseo en barco + City tour.</p>
+              <div class="route-meta"><span>🥂 Para parejas</span><span>⏱️ 3 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $2.200.000 / pareja</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#2d5a27,#7ab648)">
+              <span class="route-flag">🏔️</span>
+            </div>
+            <div class="route-body">
+              <h3>Santa Marta & Tayrona 5 días</h3>
+              <p>Hotel + Parque Tayrona + City tour. Naturaleza virgen y playa.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 5 días</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $1.450.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)">
+              <span class="route-flag">🌸</span>
+            </div>
+            <div class="route-body">
+              <h3>Medellín Fin de Semana</h3>
+              <p>Hotel + Metro Cable + Visita al Jardín Botánico y El Poblado.</p>
+              <div class="route-meta"><span>🚌 Traslados</span><span>⏱️ 2 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $680.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#8b4513,#d4a053)">
+              <span class="route-flag">☕</span>
+            </div>
+            <div class="route-body">
+              <h3>Eje Cafetero Todo Incluido</h3>
+              <p>Paisaje Cultural, parques temáticos, haciendas cafeteras y gastronomía.</p>
+              <div class="route-meta"><span>🍽️ Todo incluido</span><span>⏱️ 4 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $1.200.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0d4f48,#2ec4b6)">
+              <span class="route-flag">🐊</span>
+            </div>
+            <div class="route-body">
+              <h3>Amazonas – Aventura Selvática</h3>
+              <p>Expedición al corazón del Amazonas: fauna, comunidades y selva virgen.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 5 días</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $2.500.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TODO INCLUIDO -->
+      <div id="todo-incluido" class="tab-content">
+        <div class="routes-grid">
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)">
+              <span class="route-flag">🌴</span>
+            </div>
+            <div class="route-body">
+              <h3>Paquete San Andrés 4 noches</h3>
+              <p>Todo incluido • Vuelo + Hotel + Excursiones en el mar de siete colores.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 4 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $1.850.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#8b4513,#d4a053)">
+              <span class="route-flag">☕</span>
+            </div>
+            <div class="route-body">
+              <h3>Eje Cafetero Todo Incluido</h3>
+              <p>Paisaje Cultural, parques temáticos, haciendas cafeteras y gastronomía.</p>
+              <div class="route-meta"><span>🍽️ Todo incluido</span><span>⏱️ 4 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $1.200.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FINES DE SEMANA -->
+      <div id="finde" class="tab-content">
+        <div class="routes-grid">
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)">
+              <span class="route-flag">🌸</span>
+            </div>
+            <div class="route-body">
+              <h3>Medellín Fin de Semana</h3>
+              <p>Hotel + Metro Cable + Visita al Jardín Botánico y El Poblado.</p>
+              <div class="route-meta"><span>🚌 Traslados</span><span>⏱️ 2 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $680.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#2d5a27,#7ab648)">
+              <span class="route-flag">🏖️</span>
+            </div>
+            <div class="route-body">
+              <h3>Cartagena Fin de Semana</h3>
+              <p>Ciudad amurallada, Bocagrande y paseo en chiva por la noche.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 2 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $890.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LUNA DE MIEL -->
+      <div id="luna-miel" class="tab-content">
+        <div class="routes-grid">
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#c8860a)">
+              <span class="route-flag">💑</span>
+            </div>
+            <div class="route-body">
+              <h3>Cartagena Luna de Miel</h3>
+              <p>Hotel boutique + Cena romántica + Paseo en barco + City tour.</p>
+              <div class="route-meta"><span>🥂 Para parejas</span><span>⏱️ 3 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $2.200.000 / pareja</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)">
+              <span class="route-flag">🌅</span>
+            </div>
+            <div class="route-body">
+              <h3>San Andrés Romántico</h3>
+              <p>Resort frente al mar + Cena en la playa + Snorkel para dos.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 4 noches</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $3.100.000 / pareja</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TEMPORADA VACACIONAL -->
+      <div id="vacacional" class="tab-content">
+        <div class="routes-grid">
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#2d5a27,#7ab648)">
+              <span class="route-flag">🏔️</span>
+            </div>
+            <div class="route-body">
+              <h3>Santa Marta & Tayrona 5 días</h3>
+              <p>Hotel + Parque Tayrona + City tour. Naturaleza virgen y playa.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 5 días</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $1.450.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+          <div class="route-card" onclick="showPage('p09')">
+            <div class="route-header" style="background:linear-gradient(135deg,#0d4f48,#2ec4b6)">
+              <span class="route-flag">🐊</span>
+            </div>
+            <div class="route-body">
+              <h3>Amazonas – Aventura Selvática</h3>
+              <p>Expedición al corazón del Amazonas: fauna, comunidades y selva virgen.</p>
+              <div class="route-meta"><span>✈️ Vuelo incluido</span><span>⏱️ 5 días</span></div>
+              <div style="margin:0.5rem 0;font-weight:600;color:var(--accent)">Desde $2.500.000 / persona</div>
+              <button class="btn-sm">Ver paquete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="paquetes.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

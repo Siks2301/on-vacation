@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resumen de Reserva – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="checkout-wrapper">
+      <div class="checkout-steps"><span class="step done">1. Datos ✓</span><span class="step-sep">→</span><span class="step done">2. Selección ✓</span><span class="step-sep">→</span><span class="step active">3. Resumen</span><span class="step-sep">→</span><span class="step">4. Pago</span></div>
+      <div class="auth-card wide">
+        <h2>Resumen de <em>reserva</em></h2>
+        <div class="summary-box">
+          <div class="summary-section"><h3>Servicio</h3><div class="summary-row"><span>Grand Hotel Cartagena – Suite Premium</span><span>$680.000/noche</span></div><div class="summary-row"><span>Check-in:</span><span>15 Feb 2025</span></div><div class="summary-row"><span>Check-out:</span><span>17 Feb 2025</span></div><div class="summary-row"><span>Noches:</span><span>2</span></div></div>
+          <div class="summary-section"><h3>Extras</h3><div class="summary-row"><span>Traslado aeropuerto</span><span>$45.000</span></div><div class="summary-row"><span>Bienvenida romántica</span><span>$80.000</span></div></div>
+          <div class="summary-section"><h3>Datos del cliente</h3><div class="summary-row"><span>Nombre:</span><span>Juan Pérez</span></div><div class="summary-row"><span>Correo:</span><span>juan@email.com</span></div></div>
+          <div class="summary-total"><div class="summary-row big"><span>TOTAL A PAGAR</span><strong>$1.485.000</strong></div></div>
+        </div>
+        <div class="checkout-actions">
+          <button class="btn-ghost" onclick="showPage('p10')">Modificar datos</button>
+          <button class="btn-primary" onclick="showPage('p13')">Proceder al pago →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

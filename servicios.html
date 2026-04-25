@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short">
+      <h1>Nuestros <em>Servicios</em></h1>
+      <p>Todo lo que necesitas para tu viaje en un solo lugar</p>
+    </div>
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card" onclick="showPage('p08')"><div class="service-icon">🏨</div><h3>Hotelería</h3><p>Encuentra el hotel perfecto para tu estadía. Desde hostales económicos hasta resorts de lujo.</p><ul><li>Habitaciones individuales y familiares</li><li>Suites ejecutivas</li><li>Resorts y spa</li><li>Cabañas ecológicas</li></ul><button class="btn-outline">Explorar hoteles →</button></div>
+        <div class="service-card" onclick="window.location.href='paquetes.html'"><div class="service-icon">🌴</div><h3>Paquetes Turísticos</h3><p>Paquetes diseñados para cada tipo de viajero. Aventura, relax, cultura y gastronomía.</p><ul><li>Todo incluido</li><li>Fines de semana</li><li>Temporada vacacional</li><li>Luna de miel</li></ul><button class="btn-outline" onclick="event.stopPropagation();window.location.href='paquetes.html'">Ver paquetes →</button></div>
+        <div class="service-card" onclick="showPage('p08')"><div class="service-icon">🗺️</div><h3>Tours & Excursiones</h3><p>Descubre los mejores atractivos con guías expertos y experiencias auténticas.</p><ul><li>Tours culturales</li><li>Ecoturismo</li><li>Aventura extrema</li><li>City tours</li></ul><button class="btn-outline">Ver tours →</button></div>
+        <div class="service-card" onclick="showPage('p08')"><div class="service-icon">✈️</div><h3>Tiquetes Aéreos</h3><p>Las mejores tarifas aéreas nacionales e internacionales para llegar a tu destino.</p><ul><li>Vuelos nacionales</li><li>Vuelos internacionales</li><li>Clase económica y ejecutiva</li><li>Multidestino</li></ul><button class="btn-outline">Buscar vuelos →</button></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

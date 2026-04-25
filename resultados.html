@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultados de búsqueda – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short"><h1>Resultados de <em>búsqueda</em></h1></div>
+    <div class="container">
+      <div class="results-layout">
+        <aside class="filters-panel">
+          <h3>Filtros</h3>
+          <div class="filter-group"><label>Tipo de servicio</label>
+            <label class="checkbox-label"><input type="checkbox" checked/> Hoteles</label>
+            <label class="checkbox-label"><input type="checkbox" checked/> Paquetes turísticos</label>
+            <label class="checkbox-label"><input type="checkbox" checked/> Tours</label>
+          </div>
+          <div class="filter-group"><label>Precio por noche</label>
+            <input type="range" min="0" max="1000000" value="500000" class="range-input"/>
+            <span class="range-label">Hasta $500.000</span>
+          </div>
+          <div class="filter-group"><label>Categoría</label>
+            <label class="checkbox-label"><input type="checkbox" checked/> ⭐⭐⭐⭐⭐</label>
+            <label class="checkbox-label"><input type="checkbox" checked/> ⭐⭐⭐⭐</label>
+            <label class="checkbox-label"><input type="checkbox" checked/> ⭐⭐⭐</label>
+          </div>
+          <button class="btn-outline full" style="margin-top:1rem">Aplicar filtros</button>
+        </aside>
+        <div class="results-list">
+          <div class="results-header"><span>12 resultados encontrados</span><select class="sort-select"><option>Ordenar por: Relevancia</option><option>Precio: Menor a mayor</option><option>Precio: Mayor a menor</option><option>Calificación</option></select></div>
+          <div class="result-card" onclick="showPage('p09')">
+            <div class="result-img" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)"><span>🏨</span></div>
+            <div class="result-info"><div class="result-top"><span class="result-tag">Hotel</span><span class="result-stars">⭐⭐⭐⭐⭐</span></div><h3>Grand Hotel Cartagena</h3><p>Centro histórico, Cartagena • Vista al mar, piscina, spa, restaurante gourmet</p><div class="result-features"><span>🏊 Piscina</span><span>🍳 Desayuno</span><span>📶 WiFi</span><span>🅿️ Parking</span></div></div>
+            <div class="result-price"><div class="price-amount">$420.000<small>/noche</small></div><button class="btn-primary">Ver más</button></div>
+          </div>
+          <div class="result-card" onclick="showPage('p09')">
+            <div class="result-img" style="background:linear-gradient(135deg,#1e3a5f,#4a90d9)"><span>🌴</span></div>
+            <div class="result-info"><div class="result-top"><span class="result-tag">Paquete</span><span class="result-stars">⭐⭐⭐⭐</span></div><h3>Paquete San Andrés 4 noches</h3><p>Todo incluido • Vuelo + Hotel + Excursiones</p><div class="result-features"><span>✈️ Vuelo</span><span>🍽️ Todo incluido</span><span>🤿 Snorkel</span><span>🚌 Traslados</span></div></div>
+            <div class="result-price"><div class="price-amount">$1.850.000<small>/persona</small></div><button class="btn-primary">Ver más</button></div>
+          </div>
+          <div class="result-card" onclick="showPage('p09')">
+            <div class="result-img" style="background:linear-gradient(135deg,#2d5a27,#7ab648)"><span>🌿</span></div>
+            <div class="result-info"><div class="result-top"><span class="result-tag">Tour</span><span class="result-stars">⭐⭐⭐⭐</span></div><h3>Parque Tayrona – Experiencia Natural</h3><p>Santa Marta • Ecoturismo, caminatas y playas vírgenes</p><div class="result-features"><span>🥾 Trekking</span><span>🏕️ Camping</span><span>🐦 Fauna</span></div></div>
+            <div class="result-price"><div class="price-amount">$280.000<small>/persona</small></div><button class="btn-primary">Ver más</button></div>
+          </div>
+          <div class="result-card" onclick="showPage('p09')">
+            <div class="result-img" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)"><span>🌸</span></div>
+            <div class="result-info"><div class="result-top"><span class="result-tag">Hotel</span><span class="result-stars">⭐⭐⭐⭐</span></div><h3>Dann Carlton Medellín</h3><p>El Poblado, Medellín • Comodidad y ubicación privilegiada</p><div class="result-features"><span>🏊 Piscina</span><span>💆 Spa</span><span>📶 WiFi</span></div></div>
+            <div class="result-price"><div class="price-amount">$320.000<small>/noche</small></div><button class="btn-primary">Ver más</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

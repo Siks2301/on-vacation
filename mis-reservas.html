@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Reservas – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short"><h1>Mis <em>Reservas</em></h1></div>
+    <div class="container">
+      <div class="reservas-list">
+        <div class="reserva-card active-reserva"><div class="reserva-status"><span class="badge green">Confirmada</span></div><div class="reserva-info"><h3>Grand Hotel Cartagena – Suite Premium</h3><p>📅 15 – 17 Feb 2025 &nbsp;|&nbsp; 🔖 #OV-2025-00847</p><p>💳 Total: $1.485.000</p></div><div class="reserva-actions"><button class="btn-sm" onclick="showPage('p18')">Ver detalle</button></div></div>
+        <div class="reserva-card"><div class="reserva-status"><span class="badge yellow">Pendiente</span></div><div class="reserva-info"><h3>Paquete San Andrés 4 noches</h3><p>📅 10 – 14 Mar 2025 &nbsp;|&nbsp; 🔖 #OV-2025-00612</p><p>💳 Total: $3.700.000</p></div><div class="reserva-actions"><button class="btn-sm" onclick="showPage('p18')">Ver detalle</button></div></div>
+        <div class="reserva-card cancelled"><div class="reserva-status"><span class="badge red">Cancelada</span></div><div class="reserva-info"><h3>Tour Parque Tayrona</h3><p>📅 5 Ene 2025 &nbsp;|&nbsp; 🔖 #OV-2024-00389</p><p>💳 Reembolso: $280.000</p></div><div class="reserva-actions"><button class="btn-sm" disabled>Cancelada</button></div></div>
+      </div>
+      <div style="text-align:center; margin-top:2rem">
+        <button class="btn-ghost" onclick="doLogout()">Cerrar sesión</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

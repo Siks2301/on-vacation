@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atención al Cliente – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short"><h1>Atención al <em>Cliente</em></h1><p>Estamos aquí para ayudarte</p></div>
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-form-area">
+          <h3>Envíanos un mensaje</h3>
+          <div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Tu nombre"/></div>
+          <div class="form-group"><label>Correo electrónico</label><input type="email" placeholder="tucorreo@ejemplo.com"/></div>
+          <div class="form-group"><label>Asunto</label><select><option>Consulta sobre reserva</option><option>Cambio o modificación</option><option>Cancelación</option><option>Información de servicios</option><option>Otro</option></select></div>
+          <div class="form-group"><label>Mensaje</label><textarea rows="5" placeholder="Escríbenos tu consulta o comentario..."></textarea></div>
+          <button class="btn-primary" onclick="showPage('p21')">Enviar mensaje ✉️</button>
+        </div>
+        <div class="contact-info-area">
+          <h3>Otros canales de contacto</h3>
+          <div class="contact-item"><div class="contact-icon">📞</div><div><strong>Línea de atención</strong><p>+57 (1) 800-ON-VACATION<br/>Lunes a Sábado 7am – 8pm</p></div></div>
+          <div class="contact-item"><div class="contact-icon">💬</div><div><strong>Chat en vivo</strong><p>Disponible en nuestra app<br/>Lunes a Domingo 24h</p></div></div>
+          <div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Correo electrónico</strong><p>soporte@onvacation.co<br/>Respuesta en menos de 24h</p></div></div>
+          <div class="faq-section">
+            <h3>Preguntas frecuentes</h3>
+            <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">¿Puedo cancelar mi reserva? <span>+</span></div><div class="faq-a">Sí, puedes cancelar hasta 48 horas antes sin cargo. Después de ese período aplican penalidades según la política del hotel.</div></div>
+            <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">¿Cuándo recibo la confirmación? <span>+</span></div><div class="faq-a">La confirmación llega a tu correo inmediatamente después del pago exitoso.</div></div>
+            <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q">¿Ofrecen paquetes para grupos? <span>+</span></div><div class="faq-a">Sí, contamos con tarifas especiales para grupos de más de 10 personas. Contáctanos directamente.</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem"><button class="btn-ghost" onclick="showPage('p01')">← Volver al inicio</button></div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

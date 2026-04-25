@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rutas y Destinos – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short">
+      <h1>Rutas y <em>Destinos</em></h1>
+      <p>Explora Colombia y el mundo con nosotros</p>
+    </div>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('nacionales', this)">Rutas Nacionales</button>
+        <button class="tab" onclick="switchTab('regionales', this)">Regionales</button>
+        <button class="tab" onclick="switchTab('turisticos', this)">Destinos Turísticos</button>
+        <button class="tab" onclick="switchTab('mapa', this)">Mapa de Rutas</button>
+      </div>
+      <div id="nacionales" class="tab-content active">
+        <div class="routes-grid">
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)"><span class="route-flag">🇨🇴</span></div><div class="route-body"><h3>Cartagena de Indias</h3><p>Playas cristalinas, arquitectura colonial y la mejor gastronomía caribeña.</p><div class="route-meta"><span>✈️ Vuelo directo</span><span>⏱️ 1h desde Bogotá</span></div><button class="btn-sm">Ver paquetes</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#1e3a5f,#4a90d9)"><span class="route-flag">🌊</span></div><div class="route-body"><h3>San Andrés y Providencia</h3><p>El mar de los siete colores y playas paradisíacas te esperan.</p><div class="route-meta"><span>✈️ Vuelo directo</span><span>⏱️ 1h 30m</span></div><button class="btn-sm">Ver paquetes</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#2d5a27,#7ab648)"><span class="route-flag">🏔️</span></div><div class="route-body"><h3>Santa Marta – Tayrona</h3><p>La Sierra Nevada, el Parque Tayrona y la magia de la naturaleza virgen.</p><div class="route-meta"><span>✈️ Vuelo directo</span><span>⏱️ 1h 15m</span></div><button class="btn-sm">Ver paquetes</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)"><span class="route-flag">🌸</span></div><div class="route-body"><h3>Medellín – Antioquia</h3><p>La ciudad de la eterna primavera con cultura, gastronomía y moda.</p><div class="route-meta"><span>✈️ Vuelo directo</span><span>⏱️ 45 min</span></div><button class="btn-sm">Ver paquetes</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#8b4513,#d4a053)"><span class="route-flag">☕</span></div><div class="route-body"><h3>Eje Cafetero</h3><p>Paisaje Cultural Cafetero, Patrimonio de la Humanidad UNESCO.</p><div class="route-meta"><span>🚌 Bus o vuelo</span><span>⏱️ 4h por carretera</span></div><button class="btn-sm">Ver paquetes</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#0d4f48,#2ec4b6)"><span class="route-flag">🐊</span></div><div class="route-body"><h3>Amazonas</h3><p>Selva, biodiversidad y experiencias únicas en el pulmón del mundo.</p><div class="route-meta"><span>✈️ Vuelo</span><span>⏱️ 2h desde Bogotá</span></div><button class="btn-sm">Ver paquetes</button></div></div>
+        </div>
+      </div>
+      <div id="regionales" class="tab-content">
+        <div class="routes-grid">
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#3a0ca3,#7b2ff7)"><span class="route-flag">🏙️</span></div><div class="route-body"><h3>Región Andina</h3><p>Bogotá, Medellín, Manizales, Pereira, Cali y más ciudades del corazón de Colombia.</p><div class="route-meta"><span>🏔️ Clima templado</span></div><button class="btn-sm">Explorar</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)"><span class="route-flag">🌊</span></div><div class="route-body"><h3>Región Caribe</h3><p>Barranquilla, Cartagena, Santa Marta, Riohacha. Sol, playas y cultura costeña.</p><div class="route-meta"><span>☀️ Clima cálido</span></div><button class="btn-sm">Explorar</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#0d4f48,#2ec4b6)"><span class="route-flag">🌿</span></div><div class="route-body"><h3>Región Pacífico</h3><p>Avistamiento de ballenas, selva húmeda y cultura afrodescendiente única.</p><div class="route-meta"><span>🐋 Temporada julio–oct</span></div><button class="btn-sm">Explorar</button></div></div>
+        </div>
+      </div>
+      <div id="turisticos" class="tab-content">
+        <div class="routes-grid">
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#8b4513,#d4a053)"><span class="route-flag">🍫</span></div><div class="route-body"><h3>Gastronómico</h3><p>Tours culinarios por los sabores auténticos de Colombia.</p><button class="btn-sm">Ver tours</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#2d5a27,#7ab648)"><span class="route-flag">🌱</span></div><div class="route-body"><h3>Ecoturismo</h3><p>Parques naturales, reservas y aventuras en la naturaleza.</p><button class="btn-sm">Ver tours</button></div></div>
+          <div class="route-card" onclick="showPage('p08')"><div class="route-header" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)"><span class="route-flag">🎭</span></div><div class="route-body"><h3>Cultural</h3><p>Museos, festivales, Patrimonio UNESCO y arte colombiano.</p><button class="btn-sm">Ver tours</button></div></div>
+        </div>
+      </div>
+      <div id="mapa" class="tab-content">
+        <div class="mapa-container">
+          <div class="mapa-placeholder">
+            <div class="mapa-icon">🗺️</div>
+            <h3>Mapa Interactivo de Rutas</h3>
+            <p>Visualiza todos nuestros destinos y rutas disponibles en el mapa.</p>
+            <div class="mapa-puntos">
+              <span class="punto" style="top:30%;left:45%">📍 Bogotá</span>
+              <span class="punto" style="top:15%;left:38%">📍 Cartagena</span>
+              <span class="punto" style="top:20%;left:50%">📍 Medellín</span>
+              <span class="punto" style="top:13%;left:55%">📍 Santa Marta</span>
+              <span class="punto" style="top:8%;left:30%">📍 San Andrés</span>
+              <span class="punto" style="top:55%;left:35%">📍 Cali</span>
+              <span class="punto" style="top:70%;left:50%">📍 Amazonas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

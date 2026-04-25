@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog de Viajes – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short">
+      <h1>Blog de <em>Viajes</em></h1>
+      <p>Inspiración, tips y noticias para tu próxima aventura</p>
+    </div>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('tips', this)">Tips de viaje</button>
+        <button class="tab" onclick="switchTab('noticias-blog', this)">Noticias</button>
+        <button class="tab" onclick="switchTab('recomendaciones', this)">Recomendaciones</button>
+      </div>
+      <div id="tips" class="tab-content active">
+        <div class="blog-grid">
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#0f4c6e,#1a8a7a)"><span>🎒</span></div><div class="blog-body"><span class="blog-cat">Consejos</span><h3>10 cosas que no debes olvidar al empacar</h3><p>Una guía completa para preparar tu maleta y no olvidar nada importante en tu próximo viaje.</p><div class="blog-meta"><span>📅 15 Ene 2025</span><span>⏱️ 5 min lectura</span></div></div></article>
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)"><span>💰</span></div><div class="blog-body"><span class="blog-cat">Ahorro</span><h3>Cómo viajar en Colombia con presupuesto limitado</h3><p>Descubre los mejores consejos para disfrutar al máximo sin gastar una fortuna.</p><div class="blog-meta"><span>📅 10 Ene 2025</span><span>⏱️ 7 min lectura</span></div></div></article>
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#2d5a27,#7ab648)"><span>🌿</span></div><div class="blog-body"><span class="blog-cat">Ecoturismo</span><h3>Los mejores parques naturales de Colombia</h3><p>Una aventura a través de los paisajes más impresionantes de nuestra biodiversidad.</p><div class="blog-meta"><span>📅 5 Ene 2025</span><span>⏱️ 8 min lectura</span></div></div></article>
+        </div>
+      </div>
+      <div id="noticias-blog" class="tab-content">
+        <div class="blog-grid">
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#8b4513,#d4a053)"><span>📰</span></div><div class="blog-body"><span class="blog-cat">Turismo</span><h3>Colombia entre los 10 mejores destinos 2025</h3><p>Medios internacionales destacan a Colombia como uno de los destinos más prometedores del año.</p><div class="blog-meta"><span>📅 20 Ene 2025</span></div></div></article>
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#1e3a5f,#4a90d9)"><span>🏆</span></div><div class="blog-body"><span class="blog-cat">Premios</span><h3>On Vacation gana premio al mejor operador turístico</h3><p>Orgullo colombiano reconocido a nivel latinoamericano por nuestra excelencia en servicio.</p><div class="blog-meta"><span>📅 12 Ene 2025</span></div></div></article>
+        </div>
+      </div>
+      <div id="recomendaciones" class="tab-content">
+        <div class="blog-grid">
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#0d4f48,#2ec4b6)"><span>🍽️</span></div><div class="blog-body"><span class="blog-cat">Gastronomía</span><h3>Los mejores restaurantes de Cartagena</h3><p>Desde ceviches en la playa hasta alta cocina en el centro histórico.</p><div class="blog-meta"><span>📅 18 Ene 2025</span></div></div></article>
+          <article class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#5a2d82,#c06bc8)"><span>🌄</span></div><div class="blog-body"><span class="blog-cat">Aventura</span><h3>La Ciudad Perdida: guía completa del trekking</h3><p>Todo lo que necesitas saber para emprender esta aventura única en la Sierra Nevada.</p><div class="blog-meta"><span>📅 3 Ene 2025</span></div></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

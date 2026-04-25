@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grand Hotel Cartagena – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="container" style="padding-top:2rem">
+      <button class="btn-back" onclick="history.back()">← Volver a resultados</button>
+      <div class="detail-layout">
+        <div class="detail-main">
+         <div class="detail-hero-img" 
+style="background: url('hotel_gran.jpg') center/cover no-repeat;">
+</div>
+          <div class="detail-info">
+            <div class="detail-top"><span class="result-tag">Hotel</span><span class="result-stars">⭐⭐⭐⭐⭐</span></div>
+            <h1 class="detail-title">Grand Hotel Cartagena</h1>
+            <p class="detail-location">📍 Centro Histórico, Cartagena de Indias</p>
+            <p>Un refugio de lujo en el corazón de la ciudad amurallada. Habitaciones elegantes, piscina infinity, spa de clase mundial y gastronomía caribeña de primer nivel.</p>
+            <div class="detail-amenities">
+              <h3>Amenidades incluidas</h3>
+              <div class="amenity-grid">
+                <span class="amenity">🏊 Piscina infinity</span><span class="amenity">💆 Spa & bienestar</span><span class="amenity">🍳 Desayuno buffet</span><span class="amenity">📶 WiFi de alta velocidad</span><span class="amenity">🅿️ Estacionamiento</span><span class="amenity">🏋️ Gimnasio</span><span class="amenity">🍽️ Restaurante gourmet</span><span class="amenity">🚌 Traslados al aeropuerto</span>
+              </div>
+            </div>
+            <div class="detail-gallery">
+              <h3>Galería</h3>
+              <div class="gallery-grid">
+                <div class="gallery-item" style="background:linear-gradient(135deg,#0f4c6e,#2a9a8a)">🌊</div>
+                <div class="gallery-item" style="background:linear-gradient(135deg,#1a3a5c,#3a7abd)">🏊</div>
+                <div class="gallery-item" style="background:linear-gradient(135deg,#4a2060,#9a5bc0)">🛏️</div>
+                <div class="gallery-item" style="background:linear-gradient(135deg,#3a5020,#6a9040)">🌴</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="detail-sidebar">
+          <div class="booking-box">
+            <div class="booking-price">$420.000<small>/noche</small></div>
+            <div class="booking-rating">⭐ 4.8 (248 reseñas)</div>
+            <div class="form-group"><label>Check-in</label><input type="date"/></div>
+            <div class="form-group"><label>Check-out</label><input type="date"/></div>
+            <div class="form-group"><label>Huéspedes</label><select><option>1 persona</option><option>2 personas</option><option>3 personas</option><option>4 personas</option></select></div>
+            <div class="booking-total"><span>Total estimado:</span><strong>$840.000</strong></div>
+            <button class="btn-primary full" onclick="showPage('p10')">Reservar ahora</button>
+            <button class="btn-ghost full" onclick="showPage('p08')">Cancelar</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+        <div class="hero-orb orb3"></div>
+      </div>
+      <div class="hero-content">
+        <span class="hero-badge">✦ Experiencias únicas</span>
+        <h1 class="hero-title">Tu próximo <em>paraíso</em><br/>te espera</h1>
+        <p class="hero-sub">Hoteles de ensueño, rutas increíbles y paquetes turísticos diseñados para vivir momentos inolvidables.</p>
+        <div class="hero-search">
+          <select class="search-select">
+            <option>¿A dónde quieres ir?</option>
+            <option>Cartagena</option>
+            <option>Santa Marta</option>
+            <option>San Andrés</option>
+            <option>Medellín</option>
+            <option>Bogotá</option>
+          </select>
+          <input type="date" class="search-input" />
+          <button class="btn-search" onclick="showPage('p08')">Buscar</button>
+        </div>
+        <div class="hero-chips">
+          <button class="chip" onclick="showPage('p02')">🏨 Hoteles</button>
+          <button class="chip" onclick="showPage('p02')">🌴 Paquetes turísticos</button>
+          <button class="chip" onclick="showPage('p03')">🗺️ Destinos</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-features container">
+      <div class="section-label">Por qué elegirnos</div>
+      <h2 class="section-title">Viajes con <em>propósito</em></h2>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🌟</div><h3>Hoteles verificados</h3><p>Más de 500 hoteles aliados con garantía de calidad y confort en cada destino.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎒</div><h3>Paquetes todo incluido</h3><p>Paquetes turísticos personalizados con todo lo que necesitas para tu viaje perfecto.</p></div>
+        <div class="feature-card"><div class="feature-icon">💬</div><h3>Soporte 24/7</h3><p>Nuestro equipo está disponible las 24 horas para ayudarte en cualquier momento.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Pagos seguros</h3><p>Transacciones 100% seguras con múltiples métodos de pago disponibles.</p></div>
+      </div>
+    </div>
+<div class="section-destinos container">
+  <div class="section-label">Explorar</div>
+  <h2 class="section-title">Destinos <em>destacados</em></h2>
+
+  <div class="destinos-grid">
+
+    <!-- Cartagena (GRANDE) -->
+    <div class="destino-card big" onclick="showPage('p08')">
+      <img 
+        src="ciudad-cartagena-1200.jpg" 
+        alt="Vista panorámica del centro histórico de Cartagena con edificios coloniales y la ciudad moderna al fondo"
+        title="Cartagena - Centro histórico y ciudad moderna"
+        class="destino-img"
+      >
+      <div class="destino-overlay"></div>
+      <div class="destino-info">
+        <span class="destino-tag">COLOMBIA</span>
+        <h3>Cartagena</h3>
+        <p>Desde $450.000</p>
+      </div>
+    </div>
+
+    <!-- San Andrés -->
+    <div class="destino-card" onclick="showPage('p08')">
+      <img 
+        src="san andres.jpg" 
+        alt="Playa de aguas turquesas en San Andrés con palmeras y arena blanca"
+        title="San Andrés - Mar de siete colores y playas paradisíacas"
+        class="destino-img"
+      >
+      <div class="destino-overlay"></div>
+      <div class="destino-info">
+        <span class="destino-tag">COLOMBIA</span>
+        <h3>San Andrés</h3>
+        <p>Desde $620.000</p>
+      </div>
+    </div>
+
+    <!-- Santa Marta -->
+    <div class="destino-card" onclick="showPage('p08')">
+      <img 
+        src="santa_marta.jpg" 
+        alt="Vista costera de Santa Marta con playa, mar y montañas al fondo"
+        title="Santa Marta - Playa, mar y naturaleza"
+        class="destino-img"
+      >
+      <div class="destino-overlay"></div>
+      <div class="destino-info">
+        <span class="destino-tag">COLOMBIA</span>
+        <h3>Santa Marta</h3>
+        <p>Desde $380.000</p>
+      </div>
+    </div>
+
+    <!-- Medellín -->
+    <div class="destino-card" onclick="showPage('p08')">
+      <img 
+        src="medellin.jpg" 
+        alt="Vista de Medellín rodeada de montañas con edificios y paisaje urbano"
+        title="Medellín - Ciudad de la eterna primavera"
+        class="destino-img"
+      >
+      <div class="destino-overlay"></div>
+      <div class="destino-info">
+        <span class="destino-tag">COLOMBIA</span>
+        <h3>Medellín</h3>
+        <p>Desde $290.000</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+  
+    <div class="section-promo container">
+      <div class="promo-banner">
+        <div class="promo-text">
+          <span class="promo-badge">🔥 Oferta limitada</span>
+          <h2>Hasta 40% OFF en paquetes de temporada</h2>
+          <p>Reserva antes del 30 de abril y viaja con un precio especial.</p>
+          <button class="btn-primary" onclick="showPage('p04')">Ver promociones</button>
+        </div>
+        <div class="promo-decoration">✦</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

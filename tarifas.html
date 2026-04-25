@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horarios y Tarifas – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="page-hero short">
+      <h1>Horarios y <em>Tarifas</em></h1>
+      <p>Encuentra los mejores precios para tu próxima aventura</p>
+    </div>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('horarios', this)">Disponibilidad</button>
+        <button class="tab" onclick="switchTab('tarifas', this)">Tarifas</button>
+        <button class="tab" onclick="switchTab('promos', this)">🔥 Promociones</button>
+      </div>
+      <div id="horarios" class="tab-content active">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead><tr><th>Destino</th><th>Tipo</th><th>Check-in</th><th>Check-out</th><th>Disponibilidad</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Cartagena</td><td>Hotel ⭐⭐⭐⭐</td><td>Diario</td><td>Flexible</td><td><span class="badge green">Disponible</span></td><td><button class="btn-sm" onclick="showPage('p08')">Ver</button></td></tr>
+              <tr><td>San Andrés</td><td>Resort ⭐⭐⭐⭐⭐</td><td>Diario</td><td>Flexible</td><td><span class="badge green">Disponible</span></td><td><button class="btn-sm" onclick="showPage('p08')">Ver</button></td></tr>
+              <tr><td>Santa Marta</td><td>Paquete turístico</td><td>Vie / Sáb</td><td>Dom</td><td><span class="badge yellow">Pocos cupos</span></td><td><button class="btn-sm" onclick="showPage('p08')">Ver</button></td></tr>
+              <tr><td>Medellín</td><td>Hotel ⭐⭐⭐</td><td>Diario</td><td>Flexible</td><td><span class="badge green">Disponible</span></td><td><button class="btn-sm" onclick="showPage('p08')">Ver</button></td></tr>
+              <tr><td>Eje Cafetero</td><td>Paquete todo incluido</td><td>Vie</td><td>Dom</td><td><span class="badge red">Agotado</span></td><td><button class="btn-sm" disabled>Agotado</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tarifas" class="tab-content">
+        <div class="tarifa-cards">
+          <div class="tarifa-card"><div class="tarifa-header"><span class="tarifa-tipo">Básico</span><div class="tarifa-price">Desde<br/><strong>$180.000</strong><small>/noche</small></div></div><ul><li>✓ Habitación estándar</li><li>✓ Desayuno incluido</li><li>✓ WiFi gratuito</li><li>✗ Traslados</li></ul><button class="btn-outline" onclick="showPage('p08')">Buscar disponibilidad</button></div>
+          <div class="tarifa-card featured"><div class="tarifa-badge">Más popular</div><div class="tarifa-header"><span class="tarifa-tipo">Completo</span><div class="tarifa-price">Desde<br/><strong>$350.000</strong><small>/persona</small></div></div><ul><li>✓ Hotel 4 estrellas</li><li>✓ Desayuno y cena</li><li>✓ WiFi gratuito</li><li>✓ Traslados incluidos</li><li>✓ 1 excursión</li></ul><button class="btn-primary" onclick="showPage('p08')">Reservar ahora</button></div>
+          <div class="tarifa-card"><div class="tarifa-header"><span class="tarifa-tipo">Premium</span><div class="tarifa-price">Desde<br/><strong>$650.000</strong><small>/persona</small></div></div><ul><li>✓ Hotel 5 estrellas</li><li>✓ Todo incluido</li><li>✓ Traslados VIP</li><li>✓ Tours exclusivos</li><li>✓ Guía personalizado</li></ul><button class="btn-outline" onclick="showPage('p08')">Buscar disponibilidad</button></div>
+        </div>
+      </div>
+      <div id="promos" class="tab-content">
+        <div class="promo-list">
+          <div class="promo-item"><div class="promo-emoji">🏖️</div><div class="promo-details"><h3>Temporada de playa</h3><p>40% de descuento en hoteles de Cartagena y Santa Marta. Válido hasta el 30 de abril.</p></div><div class="promo-code">PLAYA40</div><button class="btn-sm" onclick="showPage('p08')">Aplicar</button></div>
+          <div class="promo-item"><div class="promo-emoji">💑</div><div class="promo-details"><h3>Luna de miel</h3><p>Paquetes especiales para parejas con upgrade gratuito y detalles románticos.</p></div><div class="promo-code">AMOR2025</div><button class="btn-sm" onclick="showPage('p08')">Aplicar</button></div>
+          <div class="promo-item"><div class="promo-emoji">👨‍👩‍👧‍👦</div><div class="promo-details"><h3>Familia feliz</h3><p>Niños menores de 10 años no pagan en paquetes seleccionados.</p></div><div class="promo-code">FAMILIA</div><button class="btn-sm" onclick="showPage('p08')">Aplicar</button></div>
+          <div class="promo-item"><div class="promo-emoji">🌅</div><div class="promo-details"><h3>Madrugador</h3><p>Reserva con 60 días de anticipación y ahorra 25% en cualquier destino.</p></div><div class="promo-code">EARLY25</div><button class="btn-sm" onclick="showPage('p08')">Aplicar</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">✦</span><span class="logo-text">On <em>Vacation</em></span></div>
+      <p>Tu agencia de turismo y hotelería de confianza. Creamos experiencias únicas e inolvidables.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Servicios</h4>
+      <a href="servicios.html">Hotelería</a>
+      <a href="servicios.html">Paquetes turísticos</a>
+      <a href="servicios.html">Tours</a>
+      <a href="tarifas.html">Tarifas</a>
+    </div>
+    <div class="footer-links">
+      <h4>Destinos</h4>
+      <a href="destinos.html">Cartagena</a>
+      <a href="destinos.html">San Andrés</a>
+      <a href="destinos.html">Santa Marta</a>
+      <a href="destinos.html">Medellín</a>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 On Vacation – Todos los derechos reservados</p>
+    <div class="footer-social"><span>🌐</span><span>📘</span><span>📸</span><span>🐦</span></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

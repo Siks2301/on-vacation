@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Datos del Cliente – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="checkout-wrapper">
+      <div class="checkout-steps"><span class="step active">1. Datos</span><span class="step-sep">→</span><span class="step">2. Selección</span><span class="step-sep">→</span><span class="step">3. Resumen</span><span class="step-sep">→</span><span class="step">4. Pago</span></div>
+      <div class="auth-card wide">
+        <h2>Datos del <em>cliente</em></h2>
+        <div class="form-grid">
+          <div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Nombre y apellido"/></div>
+          <div class="form-group"><label>Documento de identidad</label><input type="text" placeholder="Número de documento"/></div>
+          <div class="form-group"><label>Correo electrónico</label><input type="email" placeholder="Para enviar la confirmación"/></div>
+          <div class="form-group"><label>Teléfono de contacto</label><input type="tel" placeholder="+57 300 000 0000"/></div>
+          <div class="form-group"><label>Ciudad de origen</label><input type="text" placeholder="¿Desde dónde viajas?"/></div>
+          <div class="form-group"><label>Fecha de nacimiento</label><input type="date"/></div>
+        </div>
+        <div class="form-group"><label>Solicitudes especiales (opcional)</label><textarea placeholder="Dieta especial, accesibilidad, ocasión especial..." rows="3"></textarea></div>
+        <div class="checkout-actions">
+          <button class="btn-ghost" onclick="showPage('p09')">← Regresar</button>
+          <button class="btn-primary" onclick="showPage('p11')">Continuar →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

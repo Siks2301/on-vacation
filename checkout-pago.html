@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Método de Pago – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="checkout-wrapper">
+      <div class="checkout-steps"><span class="step done">1. Datos ✓</span><span class="step-sep">→</span><span class="step done">2. Selección ✓</span><span class="step-sep">→</span><span class="step done">3. Resumen ✓</span><span class="step-sep">→</span><span class="step active">4. Pago</span></div>
+      <div class="auth-card wide">
+        <h2>Método de <em>pago</em></h2>
+        <div id="pago-error" class="alert-error" style="display:none">❌ Pago rechazado. Verifica los datos de tu tarjeta e intenta nuevamente.</div>
+        <div class="payment-methods">
+          <button class="pay-method active" onclick="selectPayMethod(this,'card')">💳 Tarjeta de crédito/débito</button>
+          <button class="pay-method" onclick="selectPayMethod(this,'pse')">🏦 PSE – Débito bancario</button>
+          <button class="pay-method" onclick="selectPayMethod(this,'efecty')">💵 Efecty / Baloto</button>
+        </div>
+        <div id="pay-card" class="pay-form active">
+          <div class="form-grid">
+            <div class="form-group full"><label>Número de tarjeta</label><input type="text" placeholder="0000 0000 0000 0000" maxlength="19"/></div>
+            <div class="form-group"><label>Fecha de vencimiento</label><input type="text" placeholder="MM/AA"/></div>
+            <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="3"/></div>
+            <div class="form-group full"><label>Nombre del titular</label><input type="text" placeholder="Como aparece en la tarjeta"/></div>
+          </div>
+        </div>
+        <div id="pay-pse" class="pay-form" style="display:none">
+          <div class="form-group"><label>Banco</label><select><option>Bancolombia</option><option>Davivienda</option><option>BBVA</option><option>Banco de Bogotá</option></select></div>
+          <div class="form-group"><label>Tipo de persona</label><select><option>Natural</option><option>Jurídica</option></select></div>
+        </div>
+        <div id="pay-efecty" class="pay-form" style="display:none">
+          <div class="info-box">📋 Recibirás un número de referencia por correo electrónico. Tienes 24 horas para pagar en cualquier punto Efecty o Baloto.</div>
+        </div>
+        <div class="pay-total-bar"><span>Total a pagar: <strong>$1.485.000</strong></span><div class="pay-secure">🔒 Pago 100% seguro</div></div>
+        <div class="checkout-actions">
+          <button class="btn-ghost" onclick="showPage('p12')">← Volver</button>
+          <button class="btn-primary" onclick="doPago()">Confirmar pago 💳</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

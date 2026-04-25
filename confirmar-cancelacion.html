@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirmar Cancelación – On Vacation</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">On <em>Vacation</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="destinos.html">Destinos</a></li>
+      <li><a href="tarifas.html">Tarifas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost" onclick="showPage('p05')">Iniciar sesión</button>
+      <button class="btn-primary" onclick="showPage('p06')">Registrarse</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+<main id="app">
+
+  <section class="page active">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="cancel-icon">⚠️</div>
+        <h2>¿Cancelar <em>reserva</em>?</h2>
+        <p class="auth-sub">Esta acción no se puede deshacer. Se aplicará la política de cancelación del servicio.</p>
+        <div class="cancel-detail">
+          <p>📋 <strong>#OV-2025-00847</strong> – Grand Hotel Cartagena</p>
+          <p>📅 15 – 17 Feb 2025</p>
+          <p>💰 Posible reembolso: $1.040.000 (70%)</p>
+        </div>
+        <div class="checkout-actions">
+          <button class="btn-ghost" onclick="showPage('p18')">No, conservar reserva</button>
+          <button class="btn-danger" onclick="showPage('p20')">Sí, cancelar reserva</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
